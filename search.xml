@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo相关</title>
+    <url>/2021/12/07/Hexo_master/</url>
+    <content><![CDATA[<h1 id="Hexo必备指令"><a href="#Hexo必备指令" class="headerlink" title="Hexo必备指令"></a>Hexo必备指令</h1><span id="more"></span>
+
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul>
+<li>在<code>hexo</code>目录下<code>(E:\Software\Program\Blog</code>)，打开<code>Git Bash here</code>，并在命令行中输入:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// post</span><br><span class="line">$ hexo new <span class="built_in">test</span> // <span class="built_in">test</span> 为文章标题,在 ~/<span class="built_in">source</span>/_posts文件夹下生成test.md</span><br><span class="line">    </span><br><span class="line">// draft</span><br><span class="line">$ hexo new darft <span class="built_in">test</span> // 在~/<span class="built_in">source</span>/_drafts文件夹下生成,作为草稿</span><br><span class="line">    </span><br><span class="line">// page</span><br><span class="line">$ hexo new page <span class="built_in">test</span> // 在 ~/<span class="built_in">source</span>文件夹下生成</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>post</td>
+<td>新建文章</td>
+<td>/source/_posts/</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>新建草稿</td>
+<td>/source/_drafts/</td>
+</tr>
+<tr>
+<td>page</td>
+<td>新建页面（标签页，分类页等）</td>
+<td>/source/</td>
+</tr>
+</tbody></table>
+<ul>
+<li>对<code>test.md</code>（typora）进行自由撰写</li>
+</ul>
+<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><ul>
+<li>使用<code>hexo g</code>，生成静态文件</li>
+<li>服务器启动<code>hexo s --debug</code></li>
+<li>使用<code>hexo d</code>，进行文档到github的部署</li>
+<li>访问<code>username.github.io</code>，成功更新</li>
+</ul>
+<hr>
+<h3 id="相关环境版本"><a href="#相关环境版本" class="headerlink" title="相关环境版本"></a>相关环境版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo-cli: 4.3.0</span><br><span class="line">npm: 8.1.2</span><br><span class="line">git: 2.34.1.window.1</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Faceswap使用记录</title>
+    <url>/2021/12/08/faceswap/</url>
+    <content><![CDATA[<h1 id="Faceswap深度学习实现视频换脸"><a href="#Faceswap深度学习实现视频换脸" class="headerlink" title="Faceswap深度学习实现视频换脸"></a>Faceswap深度学习实现视频换脸</h1><h1 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+<li>Faceswap是一个实现图片和视频换脸的github项目，可在windows和linux上进行部署以及对应的操作，均含有GUI界面。</li>
+<li>Faceswap项目是一个学习重建脸部特征的深度学习算法。</li>
+<li>项目地址：<a href="https://github.com/deepfakes/faceswap">faceswap</a></li>
+</ul>
+<h2 id="相关步骤"><a href="#相关步骤" class="headerlink" title="相关步骤"></a>相关步骤</h2><h3 id="1、linux环境配置"><a href="#1、linux环境配置" class="headerlink" title="1、linux环境配置"></a>1、linux环境配置</h3><h3 id="2、Extract：原始和目标视频帧的提取"><a href="#2、Extract：原始和目标视频帧的提取" class="headerlink" title="2、Extract：原始和目标视频帧的提取"></a>2、Extract：原始和目标视频帧的提取</h3><h3 id="3、Train：模型训练"><a href="#3、Train：模型训练" class="headerlink" title="3、Train：模型训练"></a>3、Train：模型训练</h3><h3 id="4、Convert：换脸后的视频帧"><a href="#4、Convert：换脸后的视频帧" class="headerlink" title="4、Convert：换脸后的视频帧"></a>4、Convert：换脸后的视频帧</h3><h2 id="5、视频帧合成"><a href="#5、视频帧合成" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h2><hr>
+<hr>
+<h4 id="1、Linux环境配置"><a href="#1、Linux环境配置" class="headerlink" title="1、Linux环境配置"></a>1、Linux环境配置</h4><p>项目地址：<a href="https://github.com/deepfakes">deepfakes</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/deepfakes/faceswap.git</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> faceswap</span><br><span class="line"></span><br><span class="line">$ python setup.py  <span class="comment"># 按提示安装</span></span><br><span class="line"></span><br><span class="line">$ pip install -r requirements_nvidia.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、Extract"><a href="#2、Extract" class="headerlink" title="2、Extract"></a>2、Extract</h4><p>前提：准备好<strong>原视频</strong>（src.mp4）和<strong>目标视频</strong>（res.mp4）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ conda activate faceswap</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> faceswap</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>原视频脸部图片提取</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python faceswap.py extract -i ./demo/src.mp4  -o ./demo/src_faces/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>目标视频脸部图片提取</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python faceswap.py extract -i ./demo/res.mp4  -o ./demo/res_faces/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>从src_faces 和 res_faces中剔除非所需图片</li>
+</ul>
+<h4 id="3、Train"><a href="#3、Train" class="headerlink" title="3、Train"></a>3、Train</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python faceswap.py train -A ./demo/src_faces/ -B ./demo/res_faces/ -m  ./demo/model_out/</span><br></pre></td></tr></table></figure>
+
+<p>训练时间较长，可适当更改迭代次数（GUI可调）</p>
+<h4 id="4、Convert"><a href="#4、Convert" class="headerlink" title="4、Convert"></a>4、Convert</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python faceswap.py convert -i ./demo/res.mp4  -o ./demo/converted/ -m ./demo/model_out/</span><br></pre></td></tr></table></figure>
+
+<p>得到换脸后的图片集。</p>
+<h4 id="5、视频帧合成-1"><a href="#5、视频帧合成-1" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ffmpeg</span> -i ./demo/converted/1_000%3d.png -c:v libx264 -vf <span class="string">&quot;fps=25,format=yuv420p&quot;</span> ./demo/out.mp4</span><br></pre></td></tr></table></figure>
+
+<p>在demo下生成了换脸后的视频<code>out.mp4</code></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>复盘</tag>
+      </tags>
+  </entry>
+</search>
