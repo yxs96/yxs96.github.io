@@ -27,11 +27,13 @@
 <meta property="og:site_name" content="Ethan.yi">
 <meta property="og:description" content="Faceswap深度学习实现视频换脸">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/12/08/faceswap/Users/Simple_yi/AppData/Roaming/Typora/typora-user-images/image-20211210094154634.png">
 <meta property="article:published_time" content="2021-12-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-08T13:41:08.105Z">
+<meta property="article:modified_time" content="2021-12-10T01:44:46.651Z">
 <meta property="article:author" content="Ethan.yi">
 <meta property="article:tag" content="复盘">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/12/08/faceswap/Users/Simple_yi/AppData/Roaming/Typora/typora-user-images/image-20211210094154634.png">
 
 <link rel="canonical" href="http://example.com/2021/12/08/faceswap/">
 
@@ -126,17 +128,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">3</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -213,10 +215,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-12-08 00:00:00 / Modified: 21:41:08" itemprop="dateCreated datePublished" datetime="2021-12-08T00:00:00+08:00">2021-12-08</time>
+              <time title="Created: 2021-12-08 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-08T00:00:00+08:00">2021-12-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-10 09:44:46" itemprop="dateModified" datetime="2021-12-10T09:44:46+08:00">2021-12-10</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -245,17 +253,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Faceswap深度学习实现视频换脸"><a href="#Faceswap深度学习实现视频换脸" class="headerlink" title="Faceswap深度学习实现视频换脸"></a>Faceswap深度学习实现视频换脸</h1><h1 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+        <h1 id="Faceswap深度学习实现视频换脸"><a href="#Faceswap深度学习实现视频换脸" class="headerlink" title="Faceswap深度学习实现视频换脸"></a>Faceswap深度学习实现视频换脸</h1><span id="more"></span>
+
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
 <li>Faceswap是一个实现图片和视频换脸的github项目，可在windows和linux上进行部署以及对应的操作，均含有GUI界面。</li>
 <li>Faceswap项目是一个学习重建脸部特征的深度学习算法。</li>
 <li>项目地址：<a target="_blank" rel="noopener" href="https://github.com/deepfakes/faceswap">faceswap</a></li>
 </ul>
-<h2 id="相关步骤"><a href="#相关步骤" class="headerlink" title="相关步骤"></a>相关步骤</h2><h3 id="1、linux环境配置"><a href="#1、linux环境配置" class="headerlink" title="1、linux环境配置"></a>1、linux环境配置</h3><h3 id="2、Extract：原始和目标视频帧的提取"><a href="#2、Extract：原始和目标视频帧的提取" class="headerlink" title="2、Extract：原始和目标视频帧的提取"></a>2、Extract：原始和目标视频帧的提取</h3><h3 id="3、Train：模型训练"><a href="#3、Train：模型训练" class="headerlink" title="3、Train：模型训练"></a>3、Train：模型训练</h3><h3 id="4、Convert：换脸后的视频帧"><a href="#4、Convert：换脸后的视频帧" class="headerlink" title="4、Convert：换脸后的视频帧"></a>4、Convert：换脸后的视频帧</h3><h2 id="5、视频帧合成"><a href="#5、视频帧合成" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h2><hr>
+<h2 id="相关步骤"><a href="#相关步骤" class="headerlink" title="相关步骤"></a>相关步骤</h2><h3 id="1、linux环境配置"><a href="#1、linux环境配置" class="headerlink" title="1、linux环境配置"></a>1、linux环境配置</h3><h3 id="2、Extract：原始和目标视频帧的提取"><a href="#2、Extract：原始和目标视频帧的提取" class="headerlink" title="2、Extract：原始和目标视频帧的提取"></a>2、Extract：原始和目标视频帧的提取</h3><h3 id="3、Train：模型训练"><a href="#3、Train：模型训练" class="headerlink" title="3、Train：模型训练"></a>3、Train：模型训练</h3><h3 id="4、Convert：换脸后的视频帧"><a href="#4、Convert：换脸后的视频帧" class="headerlink" title="4、Convert：换脸后的视频帧"></a>4、Convert：换脸后的视频帧</h3><h3 id="5、视频帧合成"><a href="#5、视频帧合成" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h3><hr>
+<h2 id="前提假设"><a href="#前提假设" class="headerlink" title="前提假设"></a>前提假设</h2><ul>
+<li>原视频和目标视频是人物靠近镜头，视频质量高</li>
+<li>提取后的人物图片至少500+以上（越多越好）</li>
+</ul>
+<p><img src="/2021/12/08/faceswap/Users\Simple_yi\AppData\Roaming\Typora\typora-user-images\image-20211210094154634.png" alt="image-20211210094154634"></p>
+<ul>
+<li>默认迭代次数10w，GPU训练时间24h+</li>
+</ul>
 <hr>
-<h4 id="1、Linux环境配置"><a href="#1、Linux环境配置" class="headerlink" title="1、Linux环境配置"></a>1、Linux环境配置</h4><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/deepfakes">deepfakes</a></p>
+<h2 id="1、Linux环境配置"><a href="#1、Linux环境配置" class="headerlink" title="1、Linux环境配置"></a>1、Linux环境配置</h2><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/deepfakes">deepfakes</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/deepfakes/faceswap.git</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> faceswap</span><br><span class="line"></span><br><span class="line">$ python setup.py  <span class="comment"># 按提示安装</span></span><br><span class="line"></span><br><span class="line">$ pip install -r requirements_nvidia.txt</span><br></pre></td></tr></table></figure>
 
-<h4 id="2、Extract"><a href="#2、Extract" class="headerlink" title="2、Extract"></a>2、Extract</h4><p>前提：准备好<strong>原视频</strong>（src.mp4）和<strong>目标视频</strong>（res.mp4）</p>
+<h2 id="2、Extract"><a href="#2、Extract" class="headerlink" title="2、Extract"></a>2、Extract</h2><p>前提：准备好<strong>原视频</strong>（src.mp4）和<strong>目标视频</strong>（res.mp4）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ conda activate faceswap</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> faceswap</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -271,13 +289,13 @@
 <ul>
 <li>从src_faces 和 res_faces中剔除非所需图片</li>
 </ul>
-<h4 id="3、Train"><a href="#3、Train" class="headerlink" title="3、Train"></a>3、Train</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python faceswap.py train -A ./demo/src_faces/ -B ./demo/res_faces/ -m  ./demo/model_out/</span><br></pre></td></tr></table></figure>
+<h2 id="3、Train"><a href="#3、Train" class="headerlink" title="3、Train"></a>3、Train</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python faceswap.py train -A ./demo/src_faces/ -B ./demo/res_faces/ -m  ./demo/model_out/</span><br></pre></td></tr></table></figure>
 
-<p>训练时间较长，可适当更改迭代次数（GUI可调）</p>
-<h4 id="4、Convert"><a href="#4、Convert" class="headerlink" title="4、Convert"></a>4、Convert</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python faceswap.py convert -i ./demo/res.mp4  -o ./demo/converted/ -m ./demo/model_out/</span><br></pre></td></tr></table></figure>
+<p>默认迭代次数为10w，GPU训练时间较长，可适当更改迭代次数（GUI可调）</p>
+<h2 id="4、Convert"><a href="#4、Convert" class="headerlink" title="4、Convert"></a>4、Convert</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python faceswap.py convert -i ./demo/res.mp4  -o ./demo/converted/ -m ./demo/model_out/</span><br></pre></td></tr></table></figure>
 
 <p>得到换脸后的图片集。</p>
-<h4 id="5、视频帧合成-1"><a href="#5、视频帧合成-1" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ffmpeg</span> -i ./demo/converted/1_000%3d.png -c:v libx264 -vf <span class="string">&quot;fps=25,format=yuv420p&quot;</span> ./demo/out.mp4</span><br></pre></td></tr></table></figure>
+<h2 id="5、视频帧合成-1"><a href="#5、视频帧合成-1" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ffmpeg</span> -i ./demo/converted/1_000%3d.png -c:v libx264 -vf <span class="string">&quot;fps=25,format=yuv420p&quot;</span> ./demo/out.mp4</span><br></pre></td></tr></table></figure>
 
 <p>在demo下生成了换脸后的视频<code>out.mp4</code></p>
 
@@ -305,7 +323,10 @@
     <a href="/2021/12/07/Hexo_master/" rel="prev" title="Hexo相关">
       <i class="fa fa-chevron-left"></i> Hexo相关
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/09/SPM12/" rel="next" title="SPM12">
+      SPM12 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -364,7 +385,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Faceswap%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E6%8D%A2%E8%84%B8"><span class="nav-number">1.</span> <span class="nav-text">Faceswap深度学习实现视频换脸</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.2.</span> <span class="nav-text">相关步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.1.</span> <span class="nav-text">1、linux环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81Extract%EF%BC%9A%E5%8E%9F%E5%A7%8B%E5%92%8C%E7%9B%AE%E6%A0%87%E8%A7%86%E9%A2%91%E5%B8%A7%E7%9A%84%E6%8F%90%E5%8F%96"><span class="nav-number">2.2.2.</span> <span class="nav-text">2、Extract：原始和目标视频帧的提取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81Train%EF%BC%9A%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83"><span class="nav-number">2.2.3.</span> <span class="nav-text">3、Train：模型训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81Convert%EF%BC%9A%E6%8D%A2%E8%84%B8%E5%90%8E%E7%9A%84%E8%A7%86%E9%A2%91%E5%B8%A7"><span class="nav-number">2.2.4.</span> <span class="nav-text">4、Convert：换脸后的视频帧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E8%A7%86%E9%A2%91%E5%B8%A7%E5%90%88%E6%88%90"><span class="nav-number">2.3.</span> <span class="nav-text">5、视频帧合成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81Linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">2.3.0.1.</span> <span class="nav-text">1、Linux环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81Extract"><span class="nav-number">2.3.0.2.</span> <span class="nav-text">2、Extract</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81Train"><span class="nav-number">2.3.0.3.</span> <span class="nav-text">3、Train</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E3%80%81Convert"><span class="nav-number">2.3.0.4.</span> <span class="nav-text">4、Convert</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5%E3%80%81%E8%A7%86%E9%A2%91%E5%B8%A7%E5%90%88%E6%88%90-1"><span class="nav-number">2.3.0.5.</span> <span class="nav-text">5、视频帧合成</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Faceswap%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E6%8D%A2%E8%84%B8"><span class="nav-number">1.</span> <span class="nav-text">Faceswap深度学习实现视频换脸</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.2.</span> <span class="nav-text">相关步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、linux环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81Extract%EF%BC%9A%E5%8E%9F%E5%A7%8B%E5%92%8C%E7%9B%AE%E6%A0%87%E8%A7%86%E9%A2%91%E5%B8%A7%E7%9A%84%E6%8F%90%E5%8F%96"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、Extract：原始和目标视频帧的提取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81Train%EF%BC%9A%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83"><span class="nav-number">1.2.3.</span> <span class="nav-text">3、Train：模型训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81Convert%EF%BC%9A%E6%8D%A2%E8%84%B8%E5%90%8E%E7%9A%84%E8%A7%86%E9%A2%91%E5%B8%A7"><span class="nav-number">1.2.4.</span> <span class="nav-text">4、Convert：换脸后的视频帧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E8%A7%86%E9%A2%91%E5%B8%A7%E5%90%88%E6%88%90"><span class="nav-number">1.2.5.</span> <span class="nav-text">5、视频帧合成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%E5%81%87%E8%AE%BE"><span class="nav-number">1.3.</span> <span class="nav-text">前提假设</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81Linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.4.</span> <span class="nav-text">1、Linux环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81Extract"><span class="nav-number">1.5.</span> <span class="nav-text">2、Extract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81Train"><span class="nav-number">1.6.</span> <span class="nav-text">3、Train</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81Convert"><span class="nav-number">1.7.</span> <span class="nav-text">4、Convert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E8%A7%86%E9%A2%91%E5%B8%A7%E5%90%88%E6%88%90-1"><span class="nav-number">1.8.</span> <span class="nav-text">5、视频帧合成</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -380,20 +401,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

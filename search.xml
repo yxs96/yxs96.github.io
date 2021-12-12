@@ -46,6 +46,14 @@
 <hr>
 <h3 id="相关环境版本"><a href="#相关环境版本" class="headerlink" title="相关环境版本"></a>相关环境版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo-cli: 4.3.0</span><br><span class="line">npm: 8.1.2</span><br><span class="line">git: 2.34.1.window.1</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><p>站点配置文件：<code>E:\Software\Program\Blog\_config.yml</code></p>
+</li>
+<li><p>主题配置文件：<code>E:\Software\Program\Blog\themes\next\_config.yml</code></p>
+</li>
+<li><p>插入图片：<a href="https://www.cnblogs.com/yinyoupoet/p/13287385.html">typora + hexo 博客插入图片</a></p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -55,19 +63,69 @@
       </tags>
   </entry>
   <entry>
+    <title>SPM12</title>
+    <url>/2021/12/09/SPM12/</url>
+    <content><![CDATA[<h1 id="SPM12"><a href="#SPM12" class="headerlink" title="SPM12"></a>SPM12</h1><p>使用<strong>Matlab</strong> <strong>R2016a</strong> + <strong>SPM12</strong> 对PET显像进行预处理<span id="more"></span></p>
+<p>Matlab设置好SPM12路径，直接输入以下命令：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">&gt;&gt; spm</span><br></pre></td></tr></table></figure>
+
+<p>进入SPM12界面，选择<code>PET</code></p>
+<p><img src="/../images/SPM12/SPM_login.jpg" alt="SPM_login"></p>
+<p>界面如下：</p>
+<p><img src="/../images/SPM12/image-20211210102240260.png" alt="image-20211210102240260"></p>
+<h2 id="Spatial-pre-processing：空间预处理"><a href="#Spatial-pre-processing：空间预处理" class="headerlink" title="Spatial pre-processing：空间预处理"></a>Spatial pre-processing：空间预处理</h2><ul>
+<li>Realign：头动校正<ul>
+<li>Estimate：只计算附加至头文件中，不生成新文件，只修改源文件</li>
+<li>Reslice：对齐到标准像，输出文件前缀r</li>
+<li>Estimate &amp; Reslice：计算+输出并写入（文件前缀：r）</li>
+</ul>
+</li>
+<li>Coregister：空间配准<ul>
+<li>Estimate：同上</li>
+<li>Reslice：同上</li>
+<li>Estimate &amp; Reslice：文件前缀r</li>
+</ul>
+</li>
+<li>Normalise：标准化<ul>
+<li>Estimate：同上</li>
+<li>Write：文件前缀w</li>
+</ul>
+</li>
+<li>Smooth：空间平滑</li>
+<li>Segnment：<strong>分割</strong>（厉害了👍）</li>
+</ul>
+]]></content>
+      <categories>
+        <category>医学处理软件</category>
+      </categories>
+      <tags>
+        <tag>SPM12</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Faceswap使用记录</title>
     <url>/2021/12/08/faceswap/</url>
-    <content><![CDATA[<h1 id="Faceswap深度学习实现视频换脸"><a href="#Faceswap深度学习实现视频换脸" class="headerlink" title="Faceswap深度学习实现视频换脸"></a>Faceswap深度学习实现视频换脸</h1><h1 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+    <content><![CDATA[<h1 id="Faceswap深度学习实现视频换脸"><a href="#Faceswap深度学习实现视频换脸" class="headerlink" title="Faceswap深度学习实现视频换脸"></a>Faceswap深度学习实现视频换脸</h1><span id="more"></span>
+
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
 <li>Faceswap是一个实现图片和视频换脸的github项目，可在windows和linux上进行部署以及对应的操作，均含有GUI界面。</li>
 <li>Faceswap项目是一个学习重建脸部特征的深度学习算法。</li>
 <li>项目地址：<a href="https://github.com/deepfakes/faceswap">faceswap</a></li>
 </ul>
-<h2 id="相关步骤"><a href="#相关步骤" class="headerlink" title="相关步骤"></a>相关步骤</h2><h3 id="1、linux环境配置"><a href="#1、linux环境配置" class="headerlink" title="1、linux环境配置"></a>1、linux环境配置</h3><h3 id="2、Extract：原始和目标视频帧的提取"><a href="#2、Extract：原始和目标视频帧的提取" class="headerlink" title="2、Extract：原始和目标视频帧的提取"></a>2、Extract：原始和目标视频帧的提取</h3><h3 id="3、Train：模型训练"><a href="#3、Train：模型训练" class="headerlink" title="3、Train：模型训练"></a>3、Train：模型训练</h3><h3 id="4、Convert：换脸后的视频帧"><a href="#4、Convert：换脸后的视频帧" class="headerlink" title="4、Convert：换脸后的视频帧"></a>4、Convert：换脸后的视频帧</h3><h2 id="5、视频帧合成"><a href="#5、视频帧合成" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h2><hr>
+<h2 id="相关步骤"><a href="#相关步骤" class="headerlink" title="相关步骤"></a>相关步骤</h2><h3 id="1、linux环境配置"><a href="#1、linux环境配置" class="headerlink" title="1、linux环境配置"></a>1、linux环境配置</h3><h3 id="2、Extract：原始和目标视频帧的提取"><a href="#2、Extract：原始和目标视频帧的提取" class="headerlink" title="2、Extract：原始和目标视频帧的提取"></a>2、Extract：原始和目标视频帧的提取</h3><h3 id="3、Train：模型训练"><a href="#3、Train：模型训练" class="headerlink" title="3、Train：模型训练"></a>3、Train：模型训练</h3><h3 id="4、Convert：换脸后的视频帧"><a href="#4、Convert：换脸后的视频帧" class="headerlink" title="4、Convert：换脸后的视频帧"></a>4、Convert：换脸后的视频帧</h3><h3 id="5、视频帧合成"><a href="#5、视频帧合成" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h3><hr>
+<h2 id="前提假设"><a href="#前提假设" class="headerlink" title="前提假设"></a>前提假设</h2><ul>
+<li>原视频和目标视频是人物靠近镜头，视频质量高</li>
+<li>提取后的人物图片至少500+以上（越多越好）</li>
+</ul>
+<p><img src="/2021/12/08/faceswap/Users\Simple_yi\AppData\Roaming\Typora\typora-user-images\image-20211210094154634.png" alt="image-20211210094154634"></p>
+<ul>
+<li>默认迭代次数10w，GPU训练时间24h+</li>
+</ul>
 <hr>
-<h4 id="1、Linux环境配置"><a href="#1、Linux环境配置" class="headerlink" title="1、Linux环境配置"></a>1、Linux环境配置</h4><p>项目地址：<a href="https://github.com/deepfakes">deepfakes</a></p>
+<h2 id="1、Linux环境配置"><a href="#1、Linux环境配置" class="headerlink" title="1、Linux环境配置"></a>1、Linux环境配置</h2><p>项目地址：<a href="https://github.com/deepfakes">deepfakes</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/deepfakes/faceswap.git</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> faceswap</span><br><span class="line"></span><br><span class="line">$ python setup.py  <span class="comment"># 按提示安装</span></span><br><span class="line"></span><br><span class="line">$ pip install -r requirements_nvidia.txt</span><br></pre></td></tr></table></figure>
 
-<h4 id="2、Extract"><a href="#2、Extract" class="headerlink" title="2、Extract"></a>2、Extract</h4><p>前提：准备好<strong>原视频</strong>（src.mp4）和<strong>目标视频</strong>（res.mp4）</p>
+<h2 id="2、Extract"><a href="#2、Extract" class="headerlink" title="2、Extract"></a>2、Extract</h2><p>前提：准备好<strong>原视频</strong>（src.mp4）和<strong>目标视频</strong>（res.mp4）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ conda activate faceswap</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> faceswap</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -83,13 +141,13 @@
 <ul>
 <li>从src_faces 和 res_faces中剔除非所需图片</li>
 </ul>
-<h4 id="3、Train"><a href="#3、Train" class="headerlink" title="3、Train"></a>3、Train</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python faceswap.py train -A ./demo/src_faces/ -B ./demo/res_faces/ -m  ./demo/model_out/</span><br></pre></td></tr></table></figure>
+<h2 id="3、Train"><a href="#3、Train" class="headerlink" title="3、Train"></a>3、Train</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python faceswap.py train -A ./demo/src_faces/ -B ./demo/res_faces/ -m  ./demo/model_out/</span><br></pre></td></tr></table></figure>
 
-<p>训练时间较长，可适当更改迭代次数（GUI可调）</p>
-<h4 id="4、Convert"><a href="#4、Convert" class="headerlink" title="4、Convert"></a>4、Convert</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python faceswap.py convert -i ./demo/res.mp4  -o ./demo/converted/ -m ./demo/model_out/</span><br></pre></td></tr></table></figure>
+<p>默认迭代次数为10w，GPU训练时间较长，可适当更改迭代次数（GUI可调）</p>
+<h2 id="4、Convert"><a href="#4、Convert" class="headerlink" title="4、Convert"></a>4、Convert</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ python faceswap.py convert -i ./demo/res.mp4  -o ./demo/converted/ -m ./demo/model_out/</span><br></pre></td></tr></table></figure>
 
 <p>得到换脸后的图片集。</p>
-<h4 id="5、视频帧合成-1"><a href="#5、视频帧合成-1" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ffmpeg</span> -i ./demo/converted/1_000%3d.png -c:v libx264 -vf <span class="string">&quot;fps=25,format=yuv420p&quot;</span> ./demo/out.mp4</span><br></pre></td></tr></table></figure>
+<h2 id="5、视频帧合成-1"><a href="#5、视频帧合成-1" class="headerlink" title="5、视频帧合成"></a>5、视频帧合成</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ffmpeg</span> -i ./demo/converted/1_000%3d.png -c:v libx264 -vf <span class="string">&quot;fps=25,format=yuv420p&quot;</span> ./demo/out.mp4</span><br></pre></td></tr></table></figure>
 
 <p>在demo下生成了换脸后的视频<code>out.mp4</code></p>
 ]]></content>
