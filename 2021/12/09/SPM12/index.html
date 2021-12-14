@@ -20,17 +20,29 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","Muse | Mist":320,"display":"post","padding":18,"offset":10,"onmobile":false,"dimmer":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="SPM12使用Matlab R2016a + SPM12 对PET显像进行预处理">
+  <meta name="description" content="SPM12 + Matlab R2016a使用Matlab R2016a + SPM12 对PET显像进行预处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SPM12">
 <meta property="og:url" content="http://example.com/2021/12/09/SPM12/index.html">
 <meta property="og:site_name" content="Ethan.yi">
-<meta property="og:description" content="SPM12使用Matlab R2016a + SPM12 对PET显像进行预处理">
+<meta property="og:description" content="SPM12 + Matlab R2016a使用Matlab R2016a + SPM12 对PET显像进行预处理">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/SPM12/SPM_login.jpg">
 <meta property="og:image" content="http://example.com/images/SPM12/image-20211210102240260.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213112202293.png">
+<meta property="og:image" content="http://example.com/2021/12/09/SPM12/images/SPM12/image-20211213112318230.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213112557567.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213112652864.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213112810103.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213112947293.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213113021977.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213114014942.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213114142969.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213114213401.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213105342182.png">
+<meta property="og:image" content="http://example.com/images/SPM12/image-20211213105348042.png">
 <meta property="article:published_time" content="2021-12-09T14:17:09.000Z">
-<meta property="article:modified_time" content="2021-12-10T08:19:00.251Z">
+<meta property="article:modified_time" content="2021-12-13T13:20:34.205Z">
 <meta property="article:author" content="Ethan.yi">
 <meta property="article:tag" content="SPM12">
 <meta name="twitter:card" content="summary">
@@ -129,7 +141,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -139,7 +151,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">5</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -224,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-10 16:19:00" itemprop="dateModified" datetime="2021-12-10T16:19:00+08:00">2021-12-10</time>
+                <time title="Modified: 2021-12-13 21:20:34" itemprop="dateModified" datetime="2021-12-13T21:20:34+08:00">2021-12-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,7 +266,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="SPM12"><a href="#SPM12" class="headerlink" title="SPM12"></a>SPM12</h1><p>使用<strong>Matlab</strong> <strong>R2016a</strong> + <strong>SPM12</strong> 对PET显像进行预处理<span id="more"></span></p>
+        <h1 id="SPM12-Matlab-R2016a"><a href="#SPM12-Matlab-R2016a" class="headerlink" title="SPM12 + Matlab R2016a"></a>SPM12 + Matlab R2016a</h1><p>使用<strong>Matlab</strong> <strong>R2016a</strong> + <strong>SPM12</strong> 对PET显像进行预处理<span id="more"></span></p>
+<h2 id="安装Matlab-R2016a"><a href="#安装Matlab-R2016a" class="headerlink" title="安装Matlab R2016a"></a>安装Matlab R2016a</h2><ul>
+<li><p>下载链接</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1qcG0DcP8Y1ZVId09ekItiw">破解版链接</a></li>
+<li>提取码：2478</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.jb51.net/softs/427670.html">安装教程</a></p>
+</li>
+</ul>
+<h2 id="下载SPM12"><a href="#下载SPM12" class="headerlink" title="下载SPM12"></a>下载SPM12</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.fil.ion.ucl.ac.uk/spm/software/download/">官网链接</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45656790/article/details/109682620">安装教程</a></li>
+</ul>
+<hr>
 <p>Matlab设置好SPM12路径，直接输入以下命令：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; spm</span><br></pre></td></tr></table></figure>
 
@@ -262,24 +289,57 @@
 <p><img src="/../images/SPM12/SPM_login.jpg" alt="SPM_login"></p>
 <p>界面如下：</p>
 <p><img src="/../images/SPM12/image-20211210102240260.png" alt="image-20211210102240260"></p>
-<h2 id="Spatial-pre-processing：空间预处理"><a href="#Spatial-pre-processing：空间预处理" class="headerlink" title="Spatial pre-processing：空间预处理"></a>Spatial pre-processing：空间预处理</h2><ul>
-<li>Realign：头动校正<ul>
-<li>Estimate：只计算附加至头文件中，不生成新文件，只修改源文件</li>
+<h2 id="Spatial-pre-processing：空间预处理"><a href="#Spatial-pre-processing：空间预处理" class="headerlink" title="Spatial pre-processing：空间预处理"></a>Spatial pre-processing：空间预处理</h2><h3 id="Realign：头动校正"><a href="#Realign：头动校正" class="headerlink" title="Realign：头动校正"></a>Realign：头动校正</h3><p>可选参数：</p>
+<ul>
+<li>Estimate：将计算结果附加至头文件中，不生成新文件，只修改源文件</li>
 <li>Reslice：对齐到标准像，输出文件前缀r</li>
 <li>Estimate &amp; Reslice：计算+输出并写入（文件前缀：r）</li>
 </ul>
-</li>
-<li>Coregister：空间配准<ul>
+<p>步骤：</p>
+<p>1、选中<code>Realign(Est &amp; Res)</code>，弹出<code>Batch Editor</code>界面</p>
+<p><img src="/../images/SPM12/image-20211213112202293.png" alt="image-20211213112202293"></p>
+<img src="/2021/12/09/SPM12/images/SPM12/image-20211213112318230.png" alt="image-20211213112318230" style="zoom:80%;">
+
+<p>2、双击<code>Data</code>，添加需要Realign的nii数据</p>
+<p><img src="/../images/SPM12/image-20211213112557567.png" alt="image-20211213112557567"></p>
+<p><img src="/../images/SPM12/image-20211213112652864.png" alt="image-20211213112652864"></p>
+<p>3、数据导入后，点击<code>run</code>运行</p>
+<p><img src="/../images/SPM12/image-20211213112810103.png" alt="image-20211213112810103"></p>
+<ul>
+<li>文件前后对比</li>
+</ul>
+<p><img src="/../images/SPM12/image-20211213112947293.png" alt="image-20211213112947293"></p>
+<p><img src="/../images/SPM12/image-20211213113021977.png" alt="image-20211213113021977"></p>
+<p><code>mean</code>前缀文件是作为后续<code>Normalise</code>的输入文件。</p>
+<h3 id="Coregister：空间配准"><a href="#Coregister：空间配准" class="headerlink" title="Coregister：空间配准"></a>Coregister：空间配准</h3><p>可选参数：</p>
+<ul>
 <li>Estimate：同上</li>
 <li>Reslice：同上</li>
 <li>Estimate &amp; Reslice：文件前缀r</li>
 </ul>
-</li>
-<li>Normalise：标准化<ul>
-<li>Estimate：同上</li>
-<li>Write：文件前缀w</li>
+<p>此步骤几乎无影响。</p>
+<h3 id="Normalise：标准化"><a href="#Normalise：标准化" class="headerlink" title="Normalise：标准化"></a>Normalise：标准化</h3><p>可选参数：Estimate、Write、Estimate &amp; Write</p>
+<p>步骤：</p>
+<p>1、单击选择<code>Normalise(Est &amp; Wri)</code></p>
+<p>2、双击<code>Data</code>，</p>
+<ul>
+<li><code>Image to Align</code>导入<code>Realign</code>输出得到的<code>mean</code>前缀文件</li>
+<li>Images to Write导入需处理的文件</li>
 </ul>
-</li>
+<p><img src="/../images/SPM12/image-20211213114014942.png" alt="image-20211213114014942"></p>
+<p>3、参数设定</p>
+<ul>
+<li><code>Affine Regularsation</code>选定 <code>East Asian brains</code></li>
+<li><code>Voxel sizes</code>修改为<code>1.17  1.17  2.79</code></li>
+</ul>
+<p><img src="/../images/SPM12/image-20211213114142969.png" alt="image-20211213114142969"></p>
+<p><img src="/../images/SPM12/image-20211213114213401.png" alt="image-20211213114213401"></p>
+<p>4、文件前后对比</p>
+<p>4Normalise前：</p>
+<p><img src="/../images/SPM12/image-20211213105342182.png" alt="image-20211213105342182"></p>
+<p>​        Normalise后：</p>
+<p><img src="/../images/SPM12/image-20211213105348042.png" alt="image-20211213105348042"></p>
+<ul>
 <li>Smooth：空间平滑</li>
 <li>Segnment：<strong>分割</strong>（厉害了👍）</li>
 </ul>
@@ -308,7 +368,10 @@
     <a href="/2021/12/08/faceswap/" rel="prev" title="Faceswap使用记录">
       <i class="fa fa-chevron-left"></i> Faceswap使用记录
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/12/tools/" rel="next" title="tools">
+      tools <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -367,7 +430,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SPM12"><span class="nav-number">1.</span> <span class="nav-text">SPM12</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spatial-pre-processing%EF%BC%9A%E7%A9%BA%E9%97%B4%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">Spatial pre-processing：空间预处理</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SPM12-Matlab-R2016a"><span class="nav-number">1.</span> <span class="nav-text">SPM12 + Matlab R2016a</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Matlab-R2016a"><span class="nav-number">1.1.</span> <span class="nav-text">安装Matlab R2016a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDSPM12"><span class="nav-number">1.2.</span> <span class="nav-text">下载SPM12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spatial-pre-processing%EF%BC%9A%E7%A9%BA%E9%97%B4%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">1.3.</span> <span class="nav-text">Spatial pre-processing：空间预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Realign%EF%BC%9A%E5%A4%B4%E5%8A%A8%E6%A0%A1%E6%AD%A3"><span class="nav-number">1.3.1.</span> <span class="nav-text">Realign：头动校正</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coregister%EF%BC%9A%E7%A9%BA%E9%97%B4%E9%85%8D%E5%87%86"><span class="nav-number">1.3.2.</span> <span class="nav-text">Coregister：空间配准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Normalise%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96"><span class="nav-number">1.3.3.</span> <span class="nav-text">Normalise：标准化</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -383,7 +446,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -396,7 +459,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
