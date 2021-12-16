@@ -66,7 +66,9 @@
   <entry>
     <title>mysql8.0_install</title>
     <url>/2021/12/13/mysql8-0-install/</url>
-    <content><![CDATA[<h1 id="1-MySQL8-0下载、安装和使用"><a href="#1-MySQL8-0下载、安装和使用" class="headerlink" title="1.MySQL8.0下载、安装和使用"></a>1.MySQL8.0下载、安装和使用</h1><p>常见版本：</p>
+    <content><![CDATA[<h1 id="MySQL安装记录"><a href="#MySQL安装记录" class="headerlink" title="MySQL安装记录"></a>MySQL安装记录</h1><span id="more"></span>
+
+<h1 id="1-MySQL8-0下载、安装和使用"><a href="#1-MySQL8-0下载、安装和使用" class="headerlink" title="1.MySQL8.0下载、安装和使用"></a>1.MySQL8.0下载、安装和使用</h1><p>常见版本：</p>
 <ul>
 <li>MySQL Community Server 社区版本，开源免费</li>
 <li>MySQL Enterprise Edition 企业版本，付费下载</li>

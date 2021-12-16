@@ -305,7 +305,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-14 09:14:15" itemprop="dateModified" datetime="2021-12-14T09:14:15+08:00">2021-12-14</time>
+                <time title="Modified: 2021-12-16 16:06:13" itemprop="dateModified" datetime="2021-12-16T16:06:13+08:00">2021-12-16</time>
               </span>
 
           
@@ -319,52 +319,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-MySQL8-0下载、安装和使用"><a href="#1-MySQL8-0下载、安装和使用" class="headerlink" title="1.MySQL8.0下载、安装和使用"></a>1.MySQL8.0下载、安装和使用</h1><p>常见版本：</p>
-<ul>
-<li>MySQL Community Server 社区版本，开源免费</li>
-<li>MySQL Enterprise Edition 企业版本，付费下载</li>
-</ul>
-<h2 id="1-1-软件下载"><a href="#1-1-软件下载" class="headerlink" title="1.1 软件下载"></a>1.1 软件下载</h2><ul>
-<li>下载地址：<a target="_blank" rel="noopener" href="https://www.mysql.com(官网)/">https://www.mysql.com（官网）</a></li>
-<li>点击<code>DOWNLOADS</code>，然后下方点击<code>MySQL Community(GPL)Downloads</code></li>
-<li>点击<code>MySQL Community Server</code></li>
-<li>Windows下有两种安装程序<ul>
-<li><code>mysql-installer-web-community-8.0.27.1.msi</code> 下载程序大小：2.4M；联网安装组件</li>
-<li><code>mysql-installer-community-8.0.27.1.msi</code> 下载程序大小：450.7M；可离线安装</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-2软件安装"><a href="#1-2软件安装" class="headerlink" title="1.2软件安装"></a>1.2软件安装</h2><ul>
-<li>msi安装教程：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cndarren/p/12830942.html">https://www.cnblogs.com/cndarren/p/12830942.html</a></li>
-</ul>
-<h2 id="1-3命令行登录"><a href="#1-3命令行登录" class="headerlink" title="1.3命令行登录"></a>1.3命令行登录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">Enter password: ******</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../images/mysql8-0-install/image-20211213215219436.png" alt="image-20211213215219436"></p>
-<h1 id="2-MySQL的简单使用"><a href="#2-MySQL的简单使用" class="headerlink" title="2.MySQL的简单使用"></a>2.MySQL的简单使用</h1><p>1、查看所有的数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show databases;</span><br></pre></td></tr></table></figure>
-
-<p>2、创建自己的数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database sysdemo；#数据库名</span><br></pre></td></tr></table></figure>
-
-<p>3、使用自己的数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use sysdemo;</span><br></pre></td></tr></table></figure>
-
-<p>4、查看某个库的所有表格</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br><span class="line"></span><br><span class="line">show tables from 数据库名；</span><br></pre></td></tr></table></figure>
-
-<p>5、创建新的表格</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create table myinfo(</span><br><span class="line">	id int,</span><br><span class="line">    name varchar(20)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<p>6、查看一个表的数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selete * from myinfo；</span><br></pre></td></tr></table></figure>
-
-<p>7、添加记录</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">insert into myinfo </span><br><span class="line">values(1, &#x27;易序晟&#x27;);</span><br></pre></td></tr></table></figure>
-
-<p>8、删除表格</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table myinfo;</span><br></pre></td></tr></table></figure>
-
-
+          <h1 id="MySQL安装记录"><a href="#MySQL安装记录" class="headerlink" title="MySQL安装记录"></a>MySQL安装记录</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/13/mysql8-0-install/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
