@@ -1,77 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo相关</title>
-    <url>/2021/12/07/Hexo_master/</url>
-    <content><![CDATA[<h1 id="Hexo必备指令"><a href="#Hexo必备指令" class="headerlink" title="Hexo必备指令"></a>Hexo必备指令</h1><span id="more"></span>
-
-<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul>
-<li>在<code>hexo</code>目录下<code>(E:\Software\Program\Blog</code>)，打开<code>Git Bash here</code>，并在命令行中输入:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// post</span><br><span class="line">$ hexo new <span class="built_in">test</span> // <span class="built_in">test</span> 为文章标题,在 ~/<span class="built_in">source</span>/_posts文件夹下生成test.md</span><br><span class="line">    </span><br><span class="line">// draft</span><br><span class="line">$ hexo new darft <span class="built_in">test</span> // 在~/<span class="built_in">source</span>/_drafts文件夹下生成,作为草稿</span><br><span class="line">    </span><br><span class="line">// page</span><br><span class="line">$ hexo new page <span class="built_in">test</span> // 在 ~/<span class="built_in">source</span>文件夹下生成</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>功能</th>
-<th>路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>post</td>
-<td>新建文章</td>
-<td>/source/_posts/</td>
-</tr>
-<tr>
-<td>draft</td>
-<td>新建草稿</td>
-<td>/source/_drafts/</td>
-</tr>
-<tr>
-<td>page</td>
-<td>新建页面（标签页，分类页等）</td>
-<td>/source/</td>
-</tr>
-</tbody></table>
-<ul>
-<li>对<code>test.md</code>（typora）进行自由撰写</li>
-</ul>
-<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><ul>
-<li><code>hexo clean</code>：清理本地缓存</li>
-<li><code>hexo g</code>：生成静态文件</li>
-<li><code>hexo s --debug</code>：服务器启动并实时调试</li>
-<li><code>hexo d</code>：文档到github的部署</li>
-<li><code>username.github.io</code>：博客外部访问</li>
-</ul>
-<hr>
-<h3 id="相关环境版本"><a href="#相关环境版本" class="headerlink" title="相关环境版本"></a>相关环境版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo-cli: 4.3.0</span><br><span class="line">npm: 8.1.2</span><br><span class="line">git: 2.34.1.window.1</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>站点配置文件：<code>E:\Software\Program\Blog\_config.yml</code></p>
-</li>
-<li><p>主题配置文件：<code>E:\Software\Program\Blog\themes\next\_config.yml</code></p>
-</li>
-<li><p>插入图片：<a href="https://www.cnblogs.com/yinyoupoet/p/13287385.html">typora + hexo 博客插入图片</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>传帮带记录</title>
     <url>/2021/12/26/%E4%BC%A0%E5%B8%AE%E5%B8%A6%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>迷茫的时候可以静下心来看看：</p>
-<ul>
+    <content><![CDATA[<h1 id="迷茫的时候可以静下心来看看："><a href="#迷茫的时候可以静下心来看看：" class="headerlink" title="迷茫的时候可以静下心来看看："></a><strong>迷茫的时候可以静下心来看看</strong><span id="more"></span>：</h1><ul>
 <li>有经验的时候往往没有机会，而真正有机会的时候，却没有老道的经验</li>
 <li>做科研途中，看论文不要被论文作者所带入，要从全局看论文，这就是所谓的批判性思维，这就明确知悉论文的创新所在和不足之处</li>
 <li>把自己懂的事情或者所作的工作与他人进行交流，并在短时间内讲清楚，这有时比自己的能力更为重要</li>
 <li>人生总会丢很多次脸，脸在“家里”丢，总比在外面丢脸强。等丢脸次数达到了一点的次数，那么你就“略胜一筹”了。（爱情同理）</li>
+<li>先想再做，往往事半功倍</li>
+<li>思维导图不仅仅适用于科研论文写作，也适用于工作处事之类的方方面面</li>
 </ul>
 ]]></content>
       <tags>
@@ -289,6 +227,69 @@
       </categories>
       <tags>
         <tag>复盘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo相关</title>
+    <url>/2021/12/07/Hexo_master/</url>
+    <content><![CDATA[<h1 id="Hexo必备指令"><a href="#Hexo必备指令" class="headerlink" title="Hexo必备指令"></a>Hexo必备指令</h1><span id="more"></span>
+
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul>
+<li>在<code>hexo</code>目录下<code>(E:\Software\Program\Blog</code>)，打开<code>Git Bash here</code>，并在命令行中输入:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// post</span><br><span class="line">$ hexo new <span class="built_in">test</span> // <span class="built_in">test</span> 为文章标题,在 ~/<span class="built_in">source</span>/_posts文件夹下生成test.md</span><br><span class="line">    </span><br><span class="line">// draft</span><br><span class="line">$ hexo new darft <span class="built_in">test</span> // 在~/<span class="built_in">source</span>/_drafts文件夹下生成,作为草稿</span><br><span class="line">    </span><br><span class="line">// page</span><br><span class="line">$ hexo new page <span class="built_in">test</span> // 在 ~/<span class="built_in">source</span>文件夹下生成</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>post</td>
+<td>新建文章</td>
+<td>/source/_posts/</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>新建草稿</td>
+<td>/source/_drafts/</td>
+</tr>
+<tr>
+<td>page</td>
+<td>新建页面（标签页，分类页等）</td>
+<td>/source/</td>
+</tr>
+</tbody></table>
+<ul>
+<li>对<code>test.md</code>（typora）进行自由撰写</li>
+</ul>
+<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><ul>
+<li><code>hexo clean</code>：清理本地缓存</li>
+<li><code>hexo g</code>：生成静态文件</li>
+<li><code>hexo s --debug</code>：服务器启动并实时调试</li>
+<li><code>hexo d</code>：文档到github的部署</li>
+<li><code>username.github.io</code>：博客外部访问</li>
+</ul>
+<hr>
+<h3 id="相关环境版本"><a href="#相关环境版本" class="headerlink" title="相关环境版本"></a>相关环境版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo-cli: 4.3.0</span><br><span class="line">npm: 8.1.2</span><br><span class="line">git: 2.34.1.window.1</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>站点配置文件：<code>E:\Software\Program\Blog\_config.yml</code></p>
+</li>
+<li><p>主题配置文件：<code>E:\Software\Program\Blog\themes\next\_config.yml</code></p>
+</li>
+<li><p>插入图片：<a href="https://www.cnblogs.com/yinyoupoet/p/13287385.html">typora + hexo 博客插入图片</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
